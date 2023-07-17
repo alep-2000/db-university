@@ -22,3 +22,10 @@ SELECT *
 FROM `courses`
 WHERE `period` LIKE 'I semestre' AND
 `year` LIKE 1;
+
+QUERY 5
+
+SELECT * 
+FROM `exams` 
+WHERE HOUR(`hour`) >= 14 
+AND `date` LIKE '2020-06-20';
