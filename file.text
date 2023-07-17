@@ -35,3 +35,8 @@ QUERY 6
 SELECT * 
 FROM `degrees`
 WHERE `level` LIKE 'magistrale';
+
+QUERY 7
+
+SELECT COUNT(*) AS `Departements`
+FROM `departments`;
