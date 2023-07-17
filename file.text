@@ -4,3 +4,9 @@ SELECT *
 FROM `students`
 WHERE YEAR(`date_of_birth`) LIKE 1990;
 
+QUERY 2
+
+SELECT * 
+FROM `courses` 
+WHERE `cfu` > 10
+
