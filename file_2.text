@@ -5,3 +5,9 @@ QUERY 1
 SELECT COUNT(*) AS `n_iscritti` 
 FROM `students`
 GROUP BY 'name';
+
+QUERY 2
+
+SELECT COUNT(*) AS `n_teachers` 
+FROM `teachers`
+GROUP BY 'office_number';
