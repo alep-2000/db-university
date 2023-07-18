@@ -40,3 +40,9 @@ FROM `degrees`
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
 WHERE `degrees`.`level` LIKE 'Magistrale' AND `departments`.`name` LIKE 'Dipartimento di Neuroscienze';
 
+QUERY 3
+
+SELECT * 
+FROM `courses`
+JOIN `teachers` ON `teachers`.`id` = `courses`.`degree_id`
+WHERE `teachers`.`id` = 44;
