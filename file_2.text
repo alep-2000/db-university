@@ -1,0 +1,7 @@
+QUERY (GROUP BY)
+
+QUERY 1
+
+SELECT COUNT(*) AS `n_iscritti` 
+FROM `students`
+GROUP BY 'name';
