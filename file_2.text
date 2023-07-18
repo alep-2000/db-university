@@ -17,3 +17,9 @@ QUERY 3
 SELECT AVG(`vote`) AS `average_marks`
 FROM `exam_student` 
 GROUP BY 'vote';
+
+QUERY 4
+
+SELECT COUNT(*) AS `n_degrees` 
+FROM `degrees` 
+GROUP BY 'departments_id';
