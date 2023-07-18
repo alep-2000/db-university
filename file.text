@@ -2,7 +2,7 @@ QUERY 1
 
 SELECT * 
 FROM `students`
-WHERE YEAR(`date_of_birth`) LIKE 1990;
+WHERE YEAR(`date_of_birth`) = 1990;
 
 QUERY 2
 
@@ -14,31 +14,32 @@ QUERY 3
 
 SELECT *
 FROM `students` 
-WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`, CURDATE()) > 30;
+WHERE TIMESTAMPDIFF(YEAR,`date_of_birth`, 
+CURDATE()) > 30;
 
 QUERY 4
 
 SELECT * 
 FROM `courses`
-WHERE `period` LIKE 'I semestre' AND
-`year` LIKE 1;
+WHERE `period` = 'I semestre' AND
+`year` = 1;
 
 QUERY 5
 
 SELECT * 
 FROM `exams` 
 WHERE HOUR(`hour`) >= 14 
-AND `date` LIKE '2020-06-20';
+AND `date` = '2020-06-20';
 
 QUERY 6
 
 SELECT * 
 FROM `degrees`
-WHERE `level` LIKE 'magistrale';
+WHERE `level` = 'magistrale';
 
 QUERY 7
 
-SELECT COUNT(*) AS `Departements`
+SELECT COUNT(*) AS `Departments`
 FROM `departments`;
 
 QUERY 8
