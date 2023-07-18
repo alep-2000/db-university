@@ -11,3 +11,9 @@ QUERY 2
 SELECT COUNT(*) AS `n_teachers` 
 FROM `teachers`
 GROUP BY 'office_number';
+
+QUERY 3
+
+SELECT AVG(`vote`) AS `average_marks`
+FROM `exam_student` 
+GROUP BY 'vote';
