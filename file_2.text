@@ -2,27 +2,27 @@ QUERY (GROUP BY)
 
 QUERY 1
 
-SELECT COUNT(*) AS `n_iscritti` 
-FROM `students`
-GROUP BY 'name';
+SELECT COUNT(*) AS `n_iscritti`, YEAR(`enrolment_date`) AS `date`
+FROM `students` 
+GROUP BY `date`;
 
 QUERY 2
 
-SELECT COUNT(*) AS `n_teachers` 
+SELECT COUNT(*) AS `n_teachers`, `office_address`
 FROM `teachers`
-GROUP BY 'office_number';
+GROUP BY `office_address`;
 
 QUERY 3
 
-SELECT AVG(`vote`) AS `average_marks`
+SELECT AVG(`vote`) AS `average_marks`, `exam_id`
 FROM `exam_student` 
-GROUP BY 'vote';
+GROUP BY `exam_id`;
 
 QUERY 4
 
-SELECT COUNT(*) AS `n_degrees` 
+SELECT COUNT(*) AS `n_degrees`, `department_id`
 FROM `degrees` 
-GROUP BY 'departments_id';
+GROUP BY `department_id`;
 
 QUERY (JOIN)
 
@@ -38,7 +38,8 @@ QUERY 2
 SELECT * 
 FROM `degrees`
 JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
-WHERE `degrees`.`level` LIKE 'Magistrale' AND `departments`.`name` LIKE 'Dipartimento di Neuroscienze';
+WHERE `degrees`.`level` LIKE 'Magistrale' AND 
+`departments`.`name` LIKE 'Dipartimento di Neuroscienze';
 
 QUERY 3
 
